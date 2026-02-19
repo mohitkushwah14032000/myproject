@@ -26,7 +26,7 @@ const Home = () => {
         <div className='w-full bg-white p-4 rounded shadow flex flex-row'>
             <div className='w-1/3'>
                 {menu.map((item, index) => (
-                    <Staticprop key={index} data={{...item,name:"mumbai"}}></Staticprop>
+                    <Staticprop key={index} data={{ ...item, name: "mumbai" }}></Staticprop>
                 ))}
             </div>
             <div>
