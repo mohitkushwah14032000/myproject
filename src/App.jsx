@@ -8,6 +8,7 @@ import Asyncawait from './Components/Asyncawait'
 import React, { Suspense, useState } from 'react'
 import Apicrud from './Components/Apicrud'
 import Register from './Components/Register'
+import Todo from './Components/Todo'
 
 const Lazyloading = React.lazy(() => import('./Components/Lazyloading'))
 const Loadcard = React.lazy(() => import('./Components/Loadcard'))
@@ -40,6 +41,7 @@ function App() {
             <Route path='asyncawait' element={<Asyncawait />}></Route>
             <Route path='apicrud' element={<Apicrud />}></Route>
             <Route path='card' element={<Load />}></Route>
+            <Route path='todo' element={<Todo/>}></Route>
             <Route path='register' element={<Register />}></Route>
             <Route path='load' element={<Suspense fallback={<h1 className='text-center text-[1.3rem]'>Loading...</h1>}>
               <div className='text-center text-[1.5rem]'>
