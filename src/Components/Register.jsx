@@ -1,9 +1,11 @@
+import { use } from "react";
 import { useState } from "react";
 
 const Register = () => {
 
     const data = { name: "", email: "", password: "" }
     const [inputdata, setInputdata] = useState(data);
+    const [flag, setFlag] = useState(false);
     const [submitname, setSubmitname] = useState("")
 
     const handledata = (e) => {
@@ -18,12 +20,16 @@ const Register = () => {
         } else {
             setSubmitname(inputdata.name)
             setInputdata(data)
+            setFlag(true)
         }
     }
 
 
     return (
         <div className="min-h-screen flex items-center justify-center flex-col">
+            <pre>
+                {(flag)&&<h2 className="font-bold text-[1.3rem] bg-gray-300 py-2 px-3">hello, {submitname}, you have registerd</h2>}
+            </pre>
             <form className='bg-sky-500 py-4 px-4 font-bold text-white mt-8' onSubmit={handlesubmit}>
                 <h1 className="text-[2rem] font-bold">Registration Form</h1>
 
