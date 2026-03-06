@@ -42,7 +42,7 @@ function App() {
             <Route path='apicrud' element={<Apicrud />}></Route>
             <Route path='card' element={<Load />}></Route>
             <Route path='register' element={<Register />}></Route>
-            <Route path='list' element={<Todolist/>}></Route>
+            <Route path='list' element={<Todolist />}></Route>
             <Route path='load' element={<Suspense fallback={<h1 className='text-center text-[1.3rem]'>Loading...</h1>}>
               <div className='text-center text-[1.5rem]'>
                 <h1 className='font-bold'>Learn Loading</h1>
